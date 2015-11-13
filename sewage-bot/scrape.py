@@ -45,7 +45,7 @@ while [] in final_list:
     final_list.remove([])
     final_list.sort()
 
-outfile = open("./sewage.csv", "wb")
+outfile = open("./webapps/bots/bots/sewage-bot/sewage.csv", "wb")
 writer = csv.writer(outfile)
 writer.writerow(["Index", "Start Date", "End Date", "Start/End Times", "Municipality", "Location", "Waterbody", "Description of Incident", "Estimated Volume (gallons)", "Wastewater Treatment Facility", "Contact Person"])
 list = writer.writerows(final_list)

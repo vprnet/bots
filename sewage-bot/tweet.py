@@ -8,7 +8,7 @@ import logging
 twitter = Twython(consumer_key, consumer_secret, access_token, access_token_secret)
 
 try:
-    with open('./past_tweets.log', 'r') as f:
+    with open('./webapps/bots/bots/sewage-bot/past_tweets.log', 'r') as f:
         reader = f.readlines()
         past_tweets = []
 

@@ -3,7 +3,7 @@
 import csv
 
 def new_tweet():
-    with open('./sewage.csv', 'r') as f:
+    with open('./webapps/bots/bots/sewage-bot/sewage.csv', 'r') as f:
         reader = csv.reader(f)
         all_incidents = []
         new_tweets = []
