@@ -7,7 +7,7 @@ import logging
 
 twitter = Twython(consumer_key, consumer_secret, access_token, access_token_secret)
 
-with open('./past_tweets.log', 'r') as f:
+with open('./webapps/bots/bots/hospital-reports/past_tweets.log', 'r') as f:
     reader = f.readlines()
     scraped_tweets = new_tweet()
     past_tweets = []
@@ -21,10 +21,10 @@ with open('./past_tweets.log', 'r') as f:
         duplicate = [s for s in past_tweets if cleaned_tweet in s]
 
         if duplicate:
-            print "Already been tweeted."
+            print 'Already been tweeted.'
         else:
             logging.basicConfig(filename='past_tweets.log', level=logging.INFO)
             logging.info(cleaned_tweet)
             twitter.update_status(status=cleaned_tweet)
             print cleaned_tweet
-            print "New tweet tweeted."
+            print 'New tweet tweeted.'
