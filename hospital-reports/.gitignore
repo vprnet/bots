@@ -1,0 +1,4 @@
+config.py
+past_tweets.log
+reports.csv
+*pyc
