@@ -7,7 +7,7 @@ import logging
 
 twitter = Twython(consumer_key, consumer_secret, access_token, access_token_secret)
 
-with open('./webapps/bots/bots/hospital-reports/past_tweets.log', 'r') as f:
+with open('/home/vprnet/webapps/bots/bots/hospital-reports/past_tweets.log', 'r') as f:
     reader = f.readlines()
     scraped_tweets = new_tweet()
     past_tweets = []
