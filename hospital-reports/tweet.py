@@ -23,7 +23,7 @@ with open('/home/vprnet/webapps/bots/bots/hospital-reports/past_tweets.log', 'r'
         if duplicate:
             print 'Already been tweeted.'
         else:
-            logging.basicConfig(filename='past_tweets.log', level=logging.INFO)
+            logging.basicConfig(filename='/home/vprnet/webapps/bots/bots/hospital-reports/past_tweets.log', level=logging.INFO)
             logging.info(cleaned_tweet)
             twitter.update_status(status=cleaned_tweet)
             print cleaned_tweet
