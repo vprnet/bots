@@ -3,7 +3,7 @@
 import csv
 
 def new_tweet():
-    with open('/home/vprnet/webapps/bots/bots/hospital-reports/reports.csv', 'r') as f:
+    with open("/home/vprnet/webapps/bots/bots/hospital-reports/reports.csv", "r") as f:
         reader = csv.reader(f)
         new_tweets = []
 

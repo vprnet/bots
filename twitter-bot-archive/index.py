@@ -9,7 +9,7 @@ def new_tweet():
     story = api_feed(tags, numResults=1)
     today = date.today()
 
-    digital_tweet = (story)[0]['date'] + ": " + (story)[0]['title'] + " " + (story)[0]['link']
+    digital_tweet = (story)[0]["date"] + ": " + (story)[0]["title"] + " " + (story)[0]["link"]
     archive_tweet = new_archive_tweet()
 
     random_tweet = random.randint(1, 2)
