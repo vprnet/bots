@@ -8,7 +8,7 @@ import logging
 twitter = Twython(consumer_key, consumer_secret, access_token, access_token_secret)
 
 try:
-    with open('./webapps/bots/bots/sewage-bot/past_tweets.log', 'r') as f:
+    with open('/home/vprnet/webapps/bots/bots/sewage-bot/past_tweets.log', 'r') as f:
         reader = f.readlines()
         past_tweets = []
 
@@ -24,7 +24,7 @@ try:
             if duplicate:
                 print "Already been tweeted."
             else:
-                logging.basicConfig(filename='past_tweets.log', level=logging.INFO)
+                logging.basicConfig(filename='/home/vprnet/webapps/bots/bots/sewage-bot/past_tweets.log', level=logging.INFO)
                 logging.info(sewage_tweet)
                 twitter.update_status(status=sewage_tweet)
                 print "New tweet tweeted."
