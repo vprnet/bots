@@ -1,3 +1,5 @@
+#!/usr/local/bin/python2.7
+
 import random
 from config import NPR_API_KEY
 from query import api_feed

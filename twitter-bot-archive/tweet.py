@@ -1,3 +1,5 @@
+#!/usr/local/bin/python2.7
+
 import tweepy
 from config import consumer_key, consumer_secret, access_token, access_token_secret
 from index import new_tweet
