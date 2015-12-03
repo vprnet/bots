@@ -21,14 +21,18 @@ for key, value in slug.iteritems():
     reports = soup.find_all("dt")
     list_of_reports = []
     list_of_hospitals = []
+    list_of_links = []
 
     for report in reports:
         new_report = report.a.string
         associated_hospital = key
         list_of_hospitals.append(associated_hospital)
         list_of_reports.append(str(new_report))
+        for link in report.find_all("a"):
+            report_links = (link.get("href"))
+        list_of_links.append(report_links)
 
     del list_of_reports[-1]
-    hospital_and_report = zip(list_of_hospitals, list_of_reports)
+    hospital_and_report = zip(list_of_hospitals, list_of_reports, list_of_links)
 
     writer.writerows(hospital_and_report)
