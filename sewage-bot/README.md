@@ -1,6 +1,6 @@
 #VPR's Sewage Twitter Bot
 
-This bot scrapes Vermont's Water Waste Inventory site and tweets when data on the Newly Reported table is updated. Follow along at [@dirtywatervt](http://twitter.com/dirtywatervt).
+This bot scrapes Vermont's Water Waste Inventory site and tweets when there is an update. Follow along at [@dirtywatervt](http://twitter.com/dirtywatervt).
 
 #Get Involved
 
