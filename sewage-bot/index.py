@@ -13,8 +13,15 @@ def new_tweet():
 
         for line in all_incidents:
             try:
-                tweet_text = line[1][:10] + ": " + line[9] + ", " + line[5] + ", " + line[3] + " " + "(" + line[8] + " estimated)"
-                new_tweets.append(tweet_text)
+                if line[0] == "Public Alert":
+                    tweet_text = line[0] + ": " + line[2] + ", " + line[5]
+                    new_tweets.append(tweet_text)
+                elif line[0] == "Pending Review":
+                    tweet_text = line[0] + ": " + line[5] + ", " + line[2] + ", " + line[4] + ", " + line[6] + ", " + line[9]
+                    new_tweets.append(tweet_text)
+                else:
+                    tweet_text = line[0] + ": " + line[5] + ", " + line[2] + ", " + line[4] + ", " + line[6] + ", " + line[9]
+                    new_tweets.append(tweet_text)
             except IndexError:
                 tweet_text = False
 
