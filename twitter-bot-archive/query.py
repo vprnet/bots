@@ -57,6 +57,11 @@ def query_api(tag, numResults=1):
     j = json.loads(r.text)
     stories = j["list"]["story"]
 
+    """Throw in a catch for the Milton story that keeps mysteriously appearing."""
+    for story in stories:
+        if id == 427033880:
+            stories.remove(story)
+
     return stories
 
 
