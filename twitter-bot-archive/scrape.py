@@ -3,6 +3,7 @@
 import requests
 import random
 import datetime
+import calendar
 from BeautifulSoup import BeautifulSoup
 
 def new_archive_tweet():
@@ -20,30 +21,7 @@ def new_archive_tweet():
     random_archive_headline = headline.text
     random_archive_date = story_date.text[:8]
 
-    if random_archive_date[:2] == "01":
-        month = "January"
-    elif random_archive_date[:2] == "02":
-        month = "February"
-    elif random_archive_date[:2] == "03":
-        month = "March"
-    elif random_archive_date[:2] == "04":
-        month = "April"
-    elif random_archive_date[:2] == "05":
-        month = "May"
-    elif random_archive_date[:2] == "06":
-        month = "June"
-    elif random_archive_date[:2] == "07":
-        month = "July"
-    elif random_archive_date[:2] == "08":
-        month = "August"
-    elif random_archive_date[:2] == "09":
-        month = "September"
-    elif random_archive_date[:2] == "10":
-        month = "October"
-    elif random_archive_date[:2] == "11":
-        month = "November"
-    else:
-        month = "December"
+    month = calendar.month_name[int(random_archive_date[:2])]
 
     tweet = month + " " + random_archive_date[3:5] + ", " + "20" + random_archive_date[6:8] + ": " + random_archive_headline.title() + " " + url
 
