@@ -59,7 +59,7 @@ def query_api(tag, numResults=1):
 
     """Throw in a catch for the Milton story that keeps mysteriously appearing."""
     for story in stories:
-        if id == 427033880:
+        if "427033865" in stories:
             stories.remove(story)
 
     return stories
